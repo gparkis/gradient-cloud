@@ -1,0 +1,12 @@
+.box {
+  background-color: #273ac5ff;
+  height: 400px;
+  width: 400px;
+  padding: 40px;
+  border-radius: 3px;
+  color: white;
+}
+
+.display-4 {
+  padding-bottom: 30px;
+}

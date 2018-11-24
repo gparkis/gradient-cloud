@@ -1,0 +1,56 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4"[style.text-shadow] = "this.horizontal + 'px ' + this.vertical + 'px ' + this.blur + 'px ' + this.color">Box Shadow Generator</h1>
+
+  <div class="jumbotron-content">
+    <div class="row justify-content-md-center">
+      <div class="box" [style.box-shadow]="this.horizontal + 'px '+ this.vertical + 'px ' + this.blur + 'px ' + this.spread + 'px ' + this.color">
+        <h3>Box Shadow</h3>
+
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for='horizontal'>Horizontal</label>
+          <input type="number" class="form-control" [(ngModel)]="horizontal" id="horizontal">
+        </div>
+        <div class="form-group col-md-6">
+            <label for='vertical'>Vertical</label>
+            <input type="number" class="form-control" [(ngModel)]="vertical" id="vertical">
+          </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for='blur'>Blur</label>
+              <input type="number" class="form-control" [(ngModel)]="blur" id="blur">
+            </div>
+            <div class="form-group col-md-6">
+                <label for='spread'>Spread</label>
+                <input type="number" class="form-control" [(ngModel)]="spread" id="spread">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" [(colorPicker)] ="color"
+
+                name="color" class="form-control"
+                [cpPresetColors]="['#000000', '#0000FF', '#008B00', '#380474', '#9D1309']"
+                [cpPosition] = "'top'"
+                [cpAlphaChannel] = "'always'"
+                [cpOutputFormat] = "'hex'"
+                [value] = "color">
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+      <h3 class="codeTitle">CSS3 Box Shadow Code Generation:  </h3>
+      <pre>
+        <code class="language-css" innerHTML="
+          <span class='token property'>  box-shadow</span><span class='token punctuation'>:</span> <span class='token function'></span>{{this.horizontal}}px {{this.vertical}}px {{this.blur}}px {{this.spread}}px {{this.color}};</span>
+          <span class='token property'></span> <span class='token function'>-webkit-box-shadow: </span>{{this.horizontal}}px {{this.vertical}}px {{this.blur}}px {{this.spread}}px {{this.color}};</span>
+          <span class='token property'></span> <span class='token function'>-moz-box-shadow: </span>{{this.horizontal}}px {{this.vertical}}px {{this.blur}}px {{this.spread}}px {{this.color}};</span>
+          <span class='token property'></span> <span class='token function'>-o-box-shadow: </span>{{this.horizontal}}px {{this.vertical}}px {{this.blur}}px {{this.spread}}px {{this.color}};</span>"></code>
+      </pre>
+    </div>

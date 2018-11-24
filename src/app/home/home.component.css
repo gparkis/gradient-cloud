@@ -1,0 +1,22 @@
+.align {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.boxes {
+  text-align: center;
+  padding: 50px;
+  font-size: 40px;
+}
+
+.spanit {
+  padding: 20px;
+}
+
+hr {
+  border: nonw;
+  height: 2px;
+  color: blue;
+  background-color: blue;
+  margin-top: 20px;
+}
